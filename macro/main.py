@@ -1,3 +1,6 @@
+import pyautogui
+import time
+
 print("Paste commands - Double tap Enter to save.")
 
 commandInputs = []
@@ -7,7 +10,12 @@ while True:
     if line == "":
         break
     commandInputs.append(line)
-print(commandInputs)
+
+print("Pasting commands in 5 seconds - open Minecraft chat.")
+
+time.sleep(5)
 
 for command in commandInputs:
-    print(command)
+    pyautogui.write(command)
+    pyautogui.press("enter")
+    time.sleep(0.5)
