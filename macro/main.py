@@ -18,4 +18,5 @@ time.sleep(5)
 for command in commandInputs:
     pyautogui.write(command)
     pyautogui.press("enter")
+    pyautogui.write("t")
     time.sleep(0.5)
